@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { BasicComponent } from './basic.component'
 
 describe('BasicComponent', () => {
-  let component: BasicComponent;
+  let component: BasicComponent
   let fixture: ComponentFixture<BasicComponent>
 
   beforeEach(async(() => {
