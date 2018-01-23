@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core'
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() navToggle = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  clickMenu() {
+    this.navToggle.emit(true)
+  }
 }

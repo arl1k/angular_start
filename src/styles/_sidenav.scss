@@ -1,0 +1,35 @@
+@import "vars";
+
+.app-side-nav{
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    min-width: 200px;
+    border-bottom: 1px solid;
+    padding: 0;
+    margin: 0;
+    border-color: $liBorderColor;
+
+    a{
+      color:$aColor;
+      box-sizing: border-box;
+      display:block;
+      font-size:16px;
+      font-weight: 400;
+      line-height: 47px;
+      text-decoration: none;
+      transition: all .3s;
+      padding: 0 16px;
+      position: relative;
+
+
+      &:hover{
+        background: $linkBackGroundColor;
+        color: $linkColor;
+      }
+    }
+  }
+}

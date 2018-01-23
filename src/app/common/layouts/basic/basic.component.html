@@ -1,8 +1,12 @@
-<p>
-  basic works!
-</p>
+<mat-drawer-container>
+  <mat-drawer #sidenav mode="push">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
 
+  <app-header (navToggle)="sidenav.toggle()"></app-header>
 
-<br>
+  <div class="app-page-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
 
-<router-outlet></router-outlet>
