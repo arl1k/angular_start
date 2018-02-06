@@ -10,6 +10,7 @@ import { LayoutsModule } from './common/layouts/layouts.module'
 import { DashboardModule } from './pages/dashboard/dashboard.module'
 import { TableModule } from './pages/table/table.module'
 import { NotFoundModule } from './pages/not-found/not-found.module'
+import {UsersService} from "./services/users/users.service";
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { NotFoundModule } from './pages/not-found/not-found.module'
     TableModule,
     NotFoundModule
   ],
-  providers: [],
+  providers: [
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -27,23 +27,14 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor="let user of users; let i = index" (click)="rowClick(i)">
+          <ng-container>
+            <!--  not in view! just for logic use-->
+          </ng-container>
+            <td scope="row" [style.background]="user.color">{{i + 1}}</td>
+            <td [width]="user.width">{{user.first}}</td>
+            <td>{{user.last}}</td>
+            <td>{{user.email}}</td>
         </tr>
         </tbody>
       </table>
